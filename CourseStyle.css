@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: White;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px 10%;
+    background: #081b29;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration : none;
+    font-weight: 600;
+
+}
+.navbar a{
+    font-size:18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+.navbar a:hover,
+.navbar .active{
+    color: #00abfe;
+}
+
+.home {
+    margin-top:2rem;
+    width: 100%;
+    margin: 0 auto;
+    text-align: left; 
+  }
+  
+  .home_content {
+    margin: 3rem auto; 
+    float: left;
+    width: 70%;
+    padding: 2rem;
+    position: relative; 
+ }
+.home_content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home_content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home_content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home_content .btn-box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 600px;
+}
+
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn-box a {
+    background: transparent;
+    color: #00abf0;
+    z-index: 1;
+}
+
+.btn-box a:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 
+.image-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh; 
+    margin:0;
+ }
+  
+  .rotated-image {
+    max-width: 100%; 
+    height: auto;
+ } */
