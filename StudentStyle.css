@@ -45,46 +45,70 @@ body {
 .navbar .active{
     color: #00abfe;
 }
+.home{
+    height: 85vh;
+}
 .columns1{
     margin-top: 5rem;
     border: 2px solid white;
     height:250px;
     width: 100%;
-    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    float: left;
+}
+.columns1 img{
+    float: left;
+    max-height: 100%;
+    width:250px;
+}
+.columns1 .data1{
+    justify-content: center;
+    align-items:center;
+    margin-right: 30%;
+    float : right;
+    color: whitesmoke;
 }
 .columns2{
     border: 2px solid white;
     height:250px;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: left;
-    left:0;
+    float: right;
 }
-.columns3{
-   
-    border: 2px solid white;
-    height:250px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+.columns2 img{
+    float: right;
+    max-height: 100%;
+    width:250px;
 }
 
-.columns1{
+.columns2 .data2{
+    float: left;
+    justify-content: center;
+    align-items:center;
+    margin-left: 30%;
+    color: whitesmoke;
+}
+
+.columns3{
     border: 2px solid white;
     height:250px;
     width: 100%;
-    display: flex;
     flex-direction: row;
-    align-items: left;
-    left:0;
+    align-items: center;
+    float: left;
 }
-img{
+.columns3 img{
+    float:left;
     max-height: 100%;
-    max-width: 100%;
+    width:250px;
 }
+.columns3 .data1{
+    justify-content: center;
+    align-items:center;
+    margin-right: 30%;
+    float : right;
+    color: whitesmoke;
+}
+
+
+
