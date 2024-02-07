@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="selectors.css">
+    <title>Functionality of Web application</title>
+</head>
+<body>
+
+    <div class="header">
+        <a href="" class="logo">Bruins Hosting.</a>
+        <nav class="navbar">
+            <a href="selectors.html" class="active">Selectors</a>
+            <a href="index.html">Home</a>
+            <a href="About.html" >About </a>
+            <a href="Functionality.html"> Back to functionality</a>
+            <a href="StudentData.html">Student Data</a>
+        </nav>
+    </div>
+
+    <div class="content">
+        <h1>Basic introduction about the selectors : </h1>
+        <p>selectors are the fucntions which we use in javascript to fetch the data or make the function accroding to the unique class or id provided to a particluar Attribute,we study it in 4 different types</p>
+        <ul>
+            <li>1.GetElementByID</li>
+            <li>2.GetElementByClassName</li>
+            <li>3.GetElementByTagNAme</li>
+            <li>4.QuerrySelectorAll</li>
+        </ul>
+        <hr>
+        <h1>1. document.getElementById():-</h1>
+        <h4>In this our main motive will be to fetch the data from the authorized ID given to the fucntion , it will get the data only of that Id</h4>
+        <p Id="intro1">This is the paragraph 1 which is having the Id "intro1".</p>
+        <p Id="intro2">This is the paragraph 2 which is having the Id "intro2".</p>
+        <p Id="intro3">This is the paragraph 3 which is having the Id "intro3".</p>
+        <h2>JavaScript</h2>
+        <button  onclick="CallByID()">Fetch data </button>
+        <!-- here we are trying to show after the click of the button how the data was called by the Id  -->
+        <pre>
+            <code>
+                function CallByID()
+                {
+                    const elements = ["intro1", "intro2", "intro3"];
+                    let result = " ";
+                    for (let i = 0; i < elements.length; i++) {
+                        const myElement = document.getElementById(elements[i]);
+                        result += myElement.innerHTML + "<br>";
+                     }
+                    document.getElementById("id").innerHTML = result;
+                }
+            </code>
+        </pre>
+        <h2>So after clicking on fetch data you can see we get the data , which was having id intro1,intro2,intro3,with this you can even add mutiple ids at same time to fetch the data </h2>
+        <p id="id"></p>
+    <hr>
+    <h1>2 .document.getElementByClassName:- </h1>
+    <h4>here we are adding some data in p tags which are having the class names as "intro"</h4>
+    <p class="intro">hi guys,first memeber is Gurleen Kaur </p>
+    <p class="intro">Hello everyone,second memeber is Danish Gupta</p>
+    <p class="intro">Hello,third member is Prabhkot kaur</p>
+    <h2>JavaScript</h2>
+    <button onclick="ClassName()">Show Data</button>
+    <!-- here we are trying to show after the click of the button how the data was called by the name of the class  -->
+    <pre>
+        <code>
+            this is the Script function created
+                function ClassName(){
+                    const myElements = document.getElementsByClassName("intro");
+                    let result = "";
+                    for (let i = 0; i < myElements.length; i++) {
+                        // here we used for loop to fetch the data multiple time with less coding 
+                        result += "Paragraph " + (i+1) + " with class='intro' is: " + myElements[i].innerHTML + "";
+                    }
+                    document.getElementById("demo").innerHTML = result;
+            }
+        </code>
+    </pre>
+    <h2>Explanantion: so here what we witnessed is , intro class was provided to the p tags and we created a function which will call the data of that tags when we click on the button , as the function was passed on onclick of the button .</h2>
+    <p id="demo"></p>
+    <hr>
+    <h1>3. document.getElementByTagName():-</h1>
+    <h3>with this function we call the data which is depends on the tag in which it is written</h3>
+    <h5>this is the first tag of h5</h5>
+    <h5>this is the second tag of h5</h5>
+    <h5>this is the third tag of h5</h5>
+    <button onclick="tagCall()">Show Data</button>
+    <h2>JavaScript</h2>
+    <pre>
+        <code>
+            const myElements = document.getElementsByTagName("h5");
+            let result = " ";
+            for (let i = 0; i < myElements.length; i++) {
+                result += myElements[i].innerHTML + "<br> ";
+            }
+            document.getElementById("demo3").innerHTML = result;
+
+        </code>
+    </pre>
+    <h2>Here we are targeting the tag names h5, as it fetchs the data from the tag h5 it will show the data </h2>
+    <p id="demo3"></p>
+    <hr>
+    <h1>4. document.querySelectorAll():-</h1>
+    <h3>here we are adding some data in h4 tags which are having the class names as "all"</h3>
+    <h4 class="all">hi guys,h4 with all class </h4>
+    <h3 class="all">Hello everyone , h3 with all class</h3>
+    <h4 class="all">Hello,h4 with all class </h4>
+    <button onclick="AllClassSelector()">Show Data</button>
+    <h2>JavaScript</h2>
+    <pre>
+        <code>
+            function AllClassSelector(){
+                const myElements = document.querySelectorAll("h4.all");
+            let result = '';
+    
+            for (let i = 0; i < myElements.length; i++) {
+                if (myElements[i].classList.contains("all")) {
+                    result = "The " + [i+1]+ " paragraph with class='all' is: " + myElements[i].innerHTML;
+                    break;
+                }
+            }
+    
+            document.getElementById("demo2").innerHTML = result;
+            }
+        </code>
+    </pre>
+    <h2>Here we are targeting the class name of the h3 tag with which it fetchs all the data  together accrodingly</h2>
+    <p id="demo4"></p>
+    <hr>
+    <script>
+        // 1.Document.getElementByID
+        function CallByID()
+        {
+            const elements = ["intro1", "intro2", "intro3"];
+            let result = " ";
+            for (let i = 0; i < elements.length; i++) {
+                const myElement = document.getElementById(elements[i]);
+                result += myElement.innerHTML + "<br>";
+             }
+            document.getElementById("id").innerHTML = result;
+        }
+        //2. class querry
+        function ClassName(){
+        const myElements = document.getElementsByClassName("intro");
+        let result = "";
+        for (let i = 0; i < myElements.length; i++) {
+            // here we used for loop to fetch the data multiple time with less coding 
+            result += "Paragraph " + (i+1) + " with class='intro' is: " + myElements[i].innerHTML + "<br>";
+        }
+        document.getElementById("demo").innerHTML = result;
+    }
+        //3. Document.GetELementByTagName
+        function tagCall(){
+           
+            const myElements = document.getElementsByTagName("h5");
+            let result = " ";
+            for (let i = 0; i < myElements.length; i++) {
+                result += myElements[i].innerHTML + "<br> ";
+            }
+            document.getElementById("demo3").innerHTML = result;
+
+        };
+        //4. querry selector all
+        function AllClassSelector(){
+            const myElements = document.querySelectorAll("h4.all");
+        let result = '';
+
+        for (let i = 0; i < myElements.length; i++) {
+            if (myElements[i].classList.contains("all")) {
+                result = "The " + [i+1]+ " paragraph with class='all' is: " + myElements[i].innerHTML;
+                break;
+            }
+        }
+
+        document.getElementById("demo4").innerHTML = result;
+        }
+
+
+    </script>
+
+</body>
+</html>

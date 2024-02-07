@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Raleway&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #081b29;
+    color: White;
+}
+
+.header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 20px 10%;
+    background: #081b29;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+.logo{
+    font-size: 25px;
+    color: white;
+    text-decoration : none;
+    font-weight: 600;
+
+}
+.navbar a{
+    font-size:18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+}
+.navbar a:hover,
+.navbar .active{
+    color: #00abfe;
+}
+.AssignmentBtn{
+    display:flex;;
+    margin-top: 87px;
+    padding: 40px;
+    width: 100%;
+    background-color: #081b29;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+ .AssignmentBtn a{
+    color: white;
+    align-items:center;
+    justify-content:center;
+    text-decoration: none;
+    cursor: pointer;
+    display: space-between;
+}
+.assignmentBtn a i{
+        opacity: 0;
+        visibility: hidden; 
+        transform:  translateX(-10px);
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out,transform 0.5s ease-in-out;
+ }
+.AssignmentBtn:hover{
+    border: 2px solid #00abf0;
+    color:#00abfe;
+}
+.AssignmentBtn a:hover{
+    background:transparent;
+    z-index: 1;
+}
+.AssignmentBtn a i :hover{
+    opacity: 1;
+    visibility: visible;
+    transform:  translateX(3px);
+}
