@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="javascript.css">
+</head>
+<body>
+    <header>
+        <h1>Mobile Web Application</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>JavaScript: Basic Data Types</h2>
+        <p>In JavaScript, we can create variables and assign different types of values to them. JavaScript supports 7 basic data types:</p>
+        <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Null</li>
+            <li>Undefined</li>
+            <li>Object</li>
+            <li>Symbol</li>
+        </ul>
+
+        <br>
+
+        <h3>JavaScript: Functions </h3>
+        <ul>
+        <li>In Javascript we can use functions to attain or to get the numerous output , by providing them the  few intellegence through the code and can get the outptuts through it in diffrent format </p>
+            <button onclick="styleHeadings()">JS Review</button>
+        <p>    </p>
+        <li> use of for loop function and get elemnmet by tag name or get element (),in which we are targetting the h1 tag as well as creating a variable to give the fucntionality </p>
+        </ul>
+
+        <br>
+
+        <h2>JavaScript:  Arrow Functions ( => )</h2>
+        <ul>
+        <li> the arrow function is much more concise. It uses the => syntax to define the function, and the function body is to the right of the arrow.</p>
+        
+            <button onclick="demo()" id="arr">Arrow Function</button>
+            <p></p>
+        <li> here as we can see , when we click on it the data passed in it gives the output in the same button ,because we targated the same inner html of the button </p>
+        </ul>
+
+        <br>
+
+        <h2>JavaScript:  Rest Parameters </h2>
+        <ul>
+            In JavaScript, rest parameters are denoted by three dots ... before the parameter name. This allows us to pass a varying number of arguments to a function and collect them all into an array.</p>
+        
+            <button onclick="findSum(1,2,3,4,5,6,7,8,9)">Parameters</button>
+            <p id="sumi"></p>
+        <li> here as we can see , when we click on it the data passed in it gives the output in the same button ,because we targated the same inner html of the button </p>
+        </ul>
+     </main>
+    <footer>
+        <p></p>
+    </footer>
+    <script>
+//use of for loop function and get elemnmet by tag name or get element (),in which we are targetting the h1 tag as well as creating a variable to give the fucntionality 
+        function styleHeadings(){
+    var heads=document.getElementsByTagName("h3");//return an arrray of "h1"
+    var x=10;
+   for (let head of heads)
+   {
+     head.style.color=" #e74c3c";
+     let y =20;
+     alert(y);
+   }
+   alert(x);
+}
+// use of arrow function 
+var sum=(a,b)=>a+b;
+    //Arrow Function
+function demo()
+{
+    document.getElementById("arr").innerHTML+="Sum:"+sum(10,15);
+}
+// use of rest parameter
+function findSum(...num)
+{
+    var sum=0;
+    for (x of num)
+    {
+        sum+=x;
+    }
+    document.getElementById("sumi").innerHTML="Sum:"+sum;
+}
+    </script>
+</body>
+</html>
