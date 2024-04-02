@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Features</title>
+    <link rel="stylesheet" href="angular.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="Functionality.html"> back to Functionality page</a></li>
+            <li><a href="index.html"> main index page </a></li>
+        </ul>
+    </nav>
+<section class="container">
+    <h1>Angular Features</h1>
+
+    <div class="feature">
+        <h2>Component</h2>
+        <p>Components are the building blocks of Angular applications. They are reusable, self-contained pieces of UI with their own HTML templates and logic.</p>
+        <p class="title">Example:</p>
+        <pre>
+            <code>
+                import { Component } from '@angular/core';
+
+                @Component({
+                  selector: 'app-root',
+                  template: '&lt;p&gt;This is an root component&lt;/p&gt;'
+                })
+                export class RootComponent {}
+            </code>
+        </pre>
+        <p class="title">Explanation:</p>
+        <p>
+            <ul class="explain">
+                <li>import { Injectable } from '@angular/core';: This line imports the Injectable decorator from the Angular core library. </li>
+                <li>@Injectable({...}): This is a decorator that provides metadata about the service.</li>
+                <li>providedIn: 'root': This specifies that the service should be provided at the root level of the application.</li>
+                <li>export class RootService {}: This defines the service class.</li>
+                <li>constructor() { }: This is the constructor method of the service class. It is called when an instance of the service is created.</li>
+            </ul>
+        </p>
+    </div>
+
+    <br>
+    
+    <div class="feature">
+        <h2>Routing</h2>
+        <p>Routing in Angular allows you to navigate between different components based on the URL. It enables single-page application behavior by loading components dynamically without full page reloads.</p>
+        <p class="title">Example:</p>
+        <pre>
+            <code>
+                import { NgModule } from '@angular/core';
+                import { Routes, RouterModule } from '@angular/router';
+                import { HomeComponent } from './home.component';
+                import { AboutComponent } from './about.component';
+
+                const routes: Routes = [
+                { path: '', component: HomeComponent },
+                { path: 'about', component: AboutComponent }
+                ];
+
+                @NgModule({
+                imports: [RouterModule.forRoot(routes)],
+                exports: [RouterModule]
+                })
+                export class AppRoutingModule { }
+            </code>
+        </pre>
+        <p class="title">Explanation:</p>
+        <ul class="explain">
+            <li>import { NgModule } from '@angular/core';: This line imports the NgModule decorator from the Angular core library.</li>
+            <li>import { Routes, RouterModule } from '@angular/router';: This line imports the Routes interface and RouterModule from the Angular router module.</li>
+            <li>const routes: Routes = [ ... ];: This defines an array of route configurations. Each route maps a URL path to a component.</li>
+            <li>@NgModule({ ... }): This is a decorator that provides metadata about the NgModule. It imports the RouterModule and configures it with the defined routes using forRoot().</li>
+            <li>export class AppRoutingModule { }: This exports the AppRoutingModule class so that it can be imported and used in other modules.</li>
+        </ul>
+    </div>
+
+
+</section>
+
+</body>
+</html>

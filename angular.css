@@ -1,0 +1,57 @@
+
+body {
+    background-color: #081b29;
+}
+
+h1 {
+    font-size: xx-large;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.container h1{
+    color:  #00abfe;
+}
+
+nav {
+    background-color:  #00abfe;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.feature {
+    margin-bottom: 20px;
+    color:  #00abfe;
+}
+
+.feature h2, code, .feature .title {
+    color: #00abfe;;
+}
+
+pre {
+    background-color:whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.explain li {
+    padding: 10px;
+}
